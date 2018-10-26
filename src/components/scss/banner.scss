@@ -1,0 +1,13 @@
+.c-info-banner {
+  padding: 1.25em 0.5em;
+  background-color: #eee;
+  text-align: center;
+  margin-top: gutter(2);
+  margin-bottom: gutter(4);
+}
+.c-info-banner__text {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: $brand;
+}

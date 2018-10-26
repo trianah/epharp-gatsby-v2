@@ -1,0 +1,38 @@
+.c-image-bio {
+  max-width: 500px;
+  width: 100%;
+  border-radius: $default-border-radius;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.bio-content__text {
+  max-width: 33em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: gutter(2);
+  margin-bottom: gutter(2);
+  //border: 1px dashed purple;
+  @media only screen and (min-width: 60em){
+    margin-top: gutter(0);
+    margin-bottom: gutter(0);
+    margin-left: gutter(3);
+  }
+  @media only screen and (min-width: 80em){
+    margin-left: gutter(4.25);
+  }
+}
+
+.bio-content {
+  width: auto;
+  max-width: 65em;
+  //border: 1px dashed green;
+
+  @media only screen and (min-width: 60em){
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

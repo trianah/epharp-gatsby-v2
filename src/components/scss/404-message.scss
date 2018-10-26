@@ -1,0 +1,8 @@
+.c-404-message {
+  text-align: center;
+  padding: gutter(0.5);
+
+  p + p {
+    margin-top: gutter(1);
+  }
+}

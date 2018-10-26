@@ -8,7 +8,7 @@ public_folder: /img
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/pages/en/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -22,13 +22,49 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/en/about/index.md"
         label: "About"
         name: "about"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+          - {label: Image, name: image, widget: image}
+
+      - file: "src/pages/en/events/index.md"
+        label: "Events"
+        name: "events"
+        fields:
+          - {label: Main, name: main, widget: object, fields: [{label: Events, name: events, widget: list, fields: [{label: Title, name: title, widget: string},{label: "Date and time", name: dateTime, widget: datetime, default: "", format: "MMMM DD YYYY – hh:mm a" },{label: Venue, name: venue, widget: string}, {label: Country, name: country, widget: string}, {label: Description, name: description, widget: text}]}]}
+
+      - file: "src/pages/en/press/index.md"
+        label: "Press"
+        name: "press"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "press-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: Main, name: main, widget: object, fields: [{ label: "Press items", name: "pressItems", widget: "list", fields: [{label: Title, name: title, widget: string}, {label: Date, name: date, widget: date}, {label: Source, name: source, widget: string}, {label: Description, name: description, widget: text}, {label: Link, name: link, widget: object, fields: [{label: Link address, name: address, widget: string}, {label: Link text, name: text, widget: string}]}, {label: Tags, name: tags, widget: list}, {label: Language, name: language, widget: string}, {label: Image, name: image, widget: object, fields: [{label: Image file, name: imageFile, widget: image}, {label: Image description, name: imageDesc, widget: string}]}]}]}
+    
+      - file: "src/pages/en/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      # - file: "src/pages/en/scores/index.md"
+      #   label: "Scores"
+      #   name: "scores"
+      #   widget: "list"
+      #   fields:
+      #     - label: "Score"
+      #       name: "score"
+      #       widget: "object"
+      #       fields:
+      #         - {label: "Score name", name: name, widget: string}
+      #         - {label: "Score file", name: score_pdf, widget: file}
+
       - file: "src/pages/products/index.md"
         label: "Products Page"
         name: "products"
@@ -43,3 +79,4 @@ collections:
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      

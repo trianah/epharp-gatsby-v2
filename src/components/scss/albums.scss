@@ -1,0 +1,78 @@
+.c-album {
+  //border: 1px dashed pink;
+  max-width: 55em;
+  margin: auto;
+  @media only screen and (min-width: $break-med){
+    display: flex;
+  }
+  
+}
+.c-album__img-wrap {
+  //border: 1px dashed red;
+}
+
+.c-album__info-wrap {
+ //border: 1px dashed red;
+}
+
+.c-album + .c-album {
+  margin-top: gutter(4);
+}
+
+.c-album__image {
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $default-border-radius;
+  margin-bottom: 2rem;
+  @media only screen and (min-width: $break-med){
+    margin-right: 2rem;
+  }
+}
+
+.c-album__title {
+  //max-width: 15em;
+  margin: auto;
+  text-transform: uppercase;
+  letter-spacing: $default-letter-spacing;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: gutter(1);
+  font-weight: bold;
+  //text-align: center;
+  @media only screen and (min-width: $break-med){
+    font-size: 1.75rem;
+  }
+}
+
+.c-album__year {
+  margin-top: 0.5rem;
+  font-size: 70%;
+  display: block;
+}
+
+.c-album ol {
+  margin-left: 2rem;
+  line-height: 1.1;
+  li + li {
+    margin-top: 1rem;
+  }
+}
+
+.c-album__streaming {
+  //border: 1px dashed palevioletred;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+}
+
+.c-album__streaming-item {
+  //border: 1px dashed olive;
+  margin: 0.75rem;
+  //display: inline-block;
+  a{
+    //border: 1px dashed peru;
+    display: block;
+  }
+}

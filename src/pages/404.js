@@ -1,13 +1,21 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import PageHeading from "../components/PageHeading";
 
 const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <main>
+    <PageHeading title="PAGE NOT FOUND" />
+    <div className="site-gutters site-gutters--offset-header site-gutters--push-footer">
+      <div className="c-404-message">
+        <p>The page requested doesn't exist.</p>
+        <p>
+          Go to the{" "}
+          <a href="/" className="styled-link">
+            homepage.
+          </a>
+        </p>
+      </div>
     </div>
-  </Layout>
-)
+  </main>
+);
 
-export default NotFoundPage
+export default NotFoundPage;

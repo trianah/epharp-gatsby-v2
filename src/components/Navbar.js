@@ -1,40 +1,56 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from "react";
+import { Link } from "gatsby";
+import logo from "../img/harp-clipart.png";
 
-const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
+const Navbar = props => (
+  <header className="c-header">
+    <nav className="navbar is-transparent">
+      <div className="c-header__lower">
+        <div className="c-header__lower-start">
+          <Link to="/">
+            <img src={logo} alt="Home" className="c-header__logo" />
+          </Link>
+        </div>
+        <div className="c-header__lower-end">
+          <Link
+            className="underline--magical hover hover-1"
+            activeClassName="active"
+            to="/en/about/"
+          >
+            About
+          </Link>
+          <Link
+            className="hover hover-1"
+            activeClassName="active"
+            to="/en/events/"
+          >
+            Events
+          </Link>
+          <Link
+            className="hover hover-1"
+            activeClassName="active"
+            to="/en/albums/"
+          >
+            Albums
+          </Link>
+          <Link
+            className="hover hover-1"
+            activeClassName="active"
+            to="/en/press/"
+          >
+            Press
+          </Link>
+          <Link
+            className="hover hover-1"
+            activeClassName="active"
+            to="/en/contact/"
+          >
+            Contact
+          </Link>
+        </div>
       </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
-    </div>
-  </nav>
-)
+    </nav>
+  </header>
+);
 
-export default Navbar
+export default Navbar;

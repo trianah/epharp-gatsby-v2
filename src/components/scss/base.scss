@@ -1,0 +1,116 @@
+html {
+  background-color: $black;
+}
+
+html > * {
+  //border: 1px dashed yellowgreen;
+}
+
+html,
+body,
+body > div:first-child,
+body > div:first-child > div {
+  //height: 100%;
+}
+body > div:first-child > div {
+  display: flex;
+  flex-direction: column;
+}
+.l-content {
+  flex: 1 0 auto;
+}
+.l-footer {
+  flex-shrink: 0;
+}
+
+body {
+  //color: $dark-text;
+  color: $white;
+  font-size: 19px;
+  background-color: $black;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Source Sans Pro" !important;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 8rem;
+  margin-top: 12rem;
+  line-height: 1;
+  font-size: 2.35rem;
+  @media only screen and (min-width: $break-med) {
+    font-size: 3.5rem;
+  }
+}
+
+.h2-title {
+  text-transform: uppercase;
+  letter-spacing: $default-letter-spacing;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin-bottom: gutter(1);
+  font-weight: bold;
+  text-align: center;
+}
+
+.styled-link,
+.content a {
+  color: inherit;
+  border-bottom: 1px solid $accent;
+  box-shadow: inset 0 -2px 0px 0px $accent;
+  text-decoration: none;
+  transition: background-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  padding-bottom: 0.15em;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $accent;
+    color: $white;
+  }
+}
+
+.site-gutters {
+  margin-left: gutter(1);
+  margin-right: gutter(1);
+  //border: 1px dashed orangered;
+}
+
+.site-gutters--offset-header {
+  //margin-top: $header-height + gutter(3);
+  margin-top: gutter(3);
+}
+.site-gutters--push-footer {
+  margin-bottom: gutter(3);
+}
+
+.text-container {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 1px dashed peru;
+}
+
+.container-wide {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (min-width: $break-large) {
+    max-width: 65rem;
+  }
+}
+
+// Efect: text up and then draw a line

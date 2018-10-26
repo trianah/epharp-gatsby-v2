@@ -1,0 +1,227 @@
+/*
+    File: _assets/css/scss/_libs-functions.scss
+*/
+// Typography
+
+@function size($size) {
+	@return map-get($font-size, $size);
+}
+
+@function computeLineHeight($font-size, $computed) {
+	$fs: strip-units($font-size);
+	@return $computed / $fs;
+}
+
+@function ms($increment, $value: $modular-scale-base, $ratio: $modular-scale-ratio) {
+	@return modular-scale($increment, $value: $modular-scale-base, $ratio: $modular-scale-ratio);
+}
+
+// Map helpers
+
+// thanks to @ericmsuzanne for this function
+@function map-set($map, $key, $value) {
+	$new: ($key: $value);
+	@return map-merge($map, $new);
+}
+
+// Layout
+
+@function r($lines: 1, $gutter: $base-padding) {
+	@return rem(($gutter * $lines));
+}
+
+@function gutter($lines: 1, $gutter: $base-padding) {
+	@if length($lines) == 1 {
+		@return floor(($gutter * $lines) * 1px);
+	} @else if length($lines) < 5 {
+		$string: '';
+		@for $i from 1 through length($lines) {
+			$string: $string + ' ' + floor(($gutter * nth($lines, $i)) * 1px);
+		}
+		@return unquote($string);
+	} @else {
+		@warn 'To many values used in gutter function';
+		@return null;
+	}
+}
+
+@function gridCalc($columns,$total-columns: $base-max-columns) {
+	@return percentage($columns / $total-columns);
+}
+
+@function colCalc($column,$total_columns,$gutter) {
+	@return calc(#{gridCalc($column,$total_columns)} - #{$gutter});
+}
+
+@function colPush($column,$total_columns,$gutter) {
+	@return calc(#{gridCalc($column,$total_columns)} + #{$gutter});
+}
+
+@function context($width, $max-width: $base-max-width) {
+	@return percentage($width / $max-width);
+}
+
+// help funtions
+
+@function strip-units($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@function rem($font-size) {
+	@return ($font-size / $base-font-size) * 1rem;
+}
+
+// colour functions
+// Add percentage of white to a color
+@function tint($color, $percent) {
+	@return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+	@return mix(black, $color, $percent);
+}
+
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+// use eg palette(accent,light)
+@function palette($palette, $tone: 'base') {
+	@return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function c($palette, $tone: 'base') {
+	@return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function type($el, $tone: 'size') {
+	@return map-get(map-get($type, $el), $tone);
+}
+
+@function theme($tone) {
+	@return map-get(map-get($palettes, 'theme'), $tone);
+}
+
+@function opposite($arg) {
+	$output: null;
+	@if $arg == left {
+		$output: right;
+	}
+	@if $arg == right {
+		$output: left;
+	}
+	@if $arg == top {
+		$output: bottom;
+	}
+	@if $arg == bottom {
+		$output: top;
+	}
+	@return $output;
+}
+
+@function mapReverse ($map) {
+	$result: null;
+
+	@if type-of($map) == 'map' {
+		$keys: map-keys($map);
+		$map-reversed: ();
+
+		@for $i from length($keys) through 1 {
+			$map-reversed: map-merge(
+				$map-reversed,
+				 (nth($keys, $i): map-get($map, nth($keys, $i)))
+			);
+		}
+
+		@if type-of($map-reversed) == 'map' {
+			$result: $map-reversed;
+		} @else {
+			@warn 'There was an error reversing the order of '#{$map}'';
+		}
+	} @else {
+		@warn ''#{$map}' is not a valid map';
+	}
+
+	@return $result;
+}
+
+@function linear() {
+	@return cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+@function ease() {
+	@return cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@function ease-in() {
+	@return cubic-bezier(0.42, 0, 1, 1);
+}
+@function ease-in-quad() {
+	@return cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+@function ease-in-cubic() {
+	@return cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+@function ease-in-quart() {
+	@return cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+@function ease-in-quint() {
+	@return cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+@function ease-in-sine() {
+	@return cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+@function ease-in-expo() {
+	@return cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+@function ease-in-circ() {
+	@return cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+@function ease-out() {
+	@return cubic-bezier(0, 0, 0.58, 1);
+}
+@function ease-out-quad() {
+	@return cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+@function ease-out-cubic() {
+	@return cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@function ease-out-quart() {
+	@return cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@function ease-out-quint() {
+	@return cubic-bezier(0.23, 1, 0.32, 1);
+}
+@function ease-out-sine() {
+	@return cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+@function ease-out-expo() {
+	@return cubic-bezier(0.19, 1, 0.22, 1);
+}
+@function ease-out-circ() {
+	@return cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@function ease-in-out() {
+	@return cubic-bezier(0.42, 0, 0.58, 1);
+}
+@function ease-in-out-quad() {
+	@return cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@function ease-in-out-cubic() {
+	@return cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@function ease-in-out-quart() {
+	@return cubic-bezier(0.77, 0, 0.175, 1);
+}
+@function ease-in-out-quint() {
+	@return cubic-bezier(0.86, 0, 0.07, 1);
+}
+@function ease-in-out-sine() {
+	@return cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@function ease-in-out-expo() {
+	@return cubic-bezier(1, 0, 0, 1);
+}
+@function ease-in-out-circ() {
+	@return cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}

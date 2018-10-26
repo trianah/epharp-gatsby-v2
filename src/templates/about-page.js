@@ -1,55 +1,65 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import Layout from "../components/Layout";
+import PageHeading from "../components/PageHeading";
+import Content, { HTMLContent } from "../components/Content";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const AboutPageTemplate = ({
+  title,
+  content,
+  image,
+  contentComponent
+}) => {
+  const PageContent = contentComponent || Content;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
+    <Layout>
+      <main>
+        <PageHeading title={title} />
+        <div className="site-gutters site-gutters--offset-header site-gutters--push-footer">
+          <div className="bio-content">
+            <div className="bio-content__img">
+              <img
+                src={image}
+                className="c-image-bio"
+                alt="Photograph of harpist Emmanuel Padilla Holguin"
+              />
+            </div>
+            <div className="bio-content__text">
               <PageContent className="content" content={content} />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </main>
+    </Layout>
+  );
+};
 
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
+  contentComponent: PropTypes.func
+};
 
 const AboutPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
-    <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
-    </Layout>
-  )
-}
+    <AboutPageTemplate
+      contentComponent={HTMLContent}
+      title={post.frontmatter.title}
+      image={post.frontmatter.image}
+      content={post.html}
+    />
+  );
+};
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+  data: PropTypes.object.isRequired
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
@@ -57,7 +67,8 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image
       }
     }
   }
-`
+`;

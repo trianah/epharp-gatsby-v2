@@ -1,0 +1,242 @@
+.c-contact-message {
+  max-width: 23em;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+
+  @media only screen and (min-width: $break-med) {
+    font-size: 1.75rem;
+  }
+
+  p + p {
+    margin-top: 4em;
+  }
+}
+
+.c-contact-social-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 70rem;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  @media only screen and (min-width: $break-med) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c-contact-social {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  span {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0.5em;
+  }
+
+  @media only screen and (min-width: $break-med) {
+    width: 50%;
+    margin-bottom: 0rem;
+  }
+}
+
+.c-contact-social__items {
+  width: 100%;
+}
+
+.c-contact-social__youtube {
+  width: 100%;
+}
+
+.c-contact-social__items--youtube {
+  padding: 1rem;
+
+  @media only screen and (min-width: $break-small) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
+
+.c-contact-social__item--youtube {
+  width: 180px;
+  height: 110px;
+  @media only screen and (min-width: $break-med) {
+    width: 100%;
+    padding-bottom: 60%;
+  }
+}
+
+.c-contact-social__link-wrap--youtube {
+  margin-bottom: 1rem;
+
+  svg * {
+    fill: $brand-youtube;
+  }
+}
+
+.video-title {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.c-contact-social__item-wrap--youtube {
+  @media only screen and (min-width: $break-small) {
+    width: 50%;
+    padding: 1rem;
+  }
+  @media only screen and (min-width: $break-med) {
+    width: 33.3333337%;
+    padding: 1rem;
+  }
+}
+
+.c-contact-social__item-wrap--youtube + .c-contact-social__item-wrap--youtube {
+  margin-top: 2.5rem;
+  @media only screen and (min-width: $break-small) {
+    margin-top: 0;
+  }
+}
+
+.c-contact-social__items--instagram {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 6px;
+}
+
+.c-contact-social__item-wrap--facebook {
+  padding: 1rem;
+  text-align: center;
+}
+
+.c-contact-social__facebook {
+  @media only screen and (min-width: $break-med) {
+    width: 55%;
+    margin-top: 3rem;
+  }
+  @media only screen and (min-width: $break-large) {
+    width: 45%;
+    margin-top: 4rem;
+    padding-right: 2rem;
+  }
+}
+
+.c-contact-social__instagram {
+  @media only screen and (min-width: $break-med) {
+    width: 45%;
+    margin-top: 3rem;
+    @media only screen and (min-width: $break-large) {
+      width: 55%;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.c-contact-social__item--instagram,
+.c-contact-social__item--facebook,
+.c-contact-social__item--youtube {
+  background-color: #ccc;
+  height: 0;
+}
+
+.c-contact-social__item--instagram {
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.c-contact-social__item--facebook {
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+.c-contact-social__link-wrap {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.c-contact-social__link-wrap--facebook {
+  svg * {
+    fill: $brand-facebook;
+  }
+}
+
+.c-contact-social__link-wrap--instagram {
+  svg * {
+    fill: $brand-instagram;
+  }
+}
+
+.c-contact-social__link {
+  font-size: 1.5rem;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.fb-page {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.youtube-overlay {
+  position: relative;
+  display: block;
+
+  .youtube-overlay__logo {
+    position: absolute;
+    display: block;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+#instafeed {
+  margin-top: 0.8rem;
+
+  @media only screen and (min-width: 300px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  a {
+    display: none;
+  }
+
+  img {
+    display: block;
+  }
+
+  a:nth-of-type(1),
+  a:nth-of-type(2),
+  a:nth-of-type(3),
+  a:nth-of-type(4) {
+    display: block;
+
+    @media only screen and (min-width: 300px) {
+      width: 50%;
+      padding: 0.5rem;
+    }
+    @media only screen and (min-width: $break-large) {
+      width: 25%;
+    }
+  }
+
+  span {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin: 0;
+  }
+}
