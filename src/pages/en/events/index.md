@@ -32,5 +32,15 @@ events:
       varius et.
     title: Sample Event
     venue: A Venue
+  - country: UK
+    dateTime: 'Nov 15 2019 – 05:30 pm'
+    description: >-
+      Sed congue volutpat ante, ut aliquet augue sodales facilisis. Proin massa
+      massa, vulputate et metus vitae, auctor maximus mi. Nulla neque nisi,
+      placerat ultricies urna in, pretium auctor turpis. Pellentesque at purus
+      metus. Ut commodo malesuada sapien, in iaculis metus varius et. Vivamus
+      ipsum urna, aliquet non consequat ac, congue quis nibh. 
+    title: Sample event 2
+    venue: Un teatro feo
 ---
 
