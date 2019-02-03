@@ -77,59 +77,50 @@ collections:
               default: "press-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
+          - { label: "Press items",
+              name: "pressItems",
+              widget: "list",
               fields:
                 [
+                  { label: Title, name: title, widget: string },
+                  { label: Date, name: date, widget: date },
+                  { label: Source, name: source, widget: string },
+                  { label: Description, name: description, widget: text },
                   {
-                    label: "Press items",
-                    name: "pressItems",
-                    widget: "list",
+                    label: Link,
+                    name: link,
+                    widget: object,
                     fields:
                       [
-                        { label: Title, name: title, widget: string },
-                        { label: Date, name: date, widget: date },
-                        { label: Source, name: source, widget: string },
-                        { label: Description, name: description, widget: text },
                         {
-                          label: Link,
-                          name: link,
-                          widget: object,
-                          fields:
-                            [
-                              {
-                                label: Link address,
-                                name: address,
-                                widget: string,
-                              },
-                              { label: Link text, name: text, widget: string },
-                            ],
+                          label: Link address,
+                          name: address,
+                          widget: string,
                         },
-                        { label: Tags, name: tags, widget: list },
-                        { label: Language, name: language, widget: string },
+                        { label: Link text, name: text, widget: string },
+                      ],
+                  },
+                  { label: Tags, name: tags, widget: list },
+                  { label: Language, name: language, widget: string },
+                  {
+                    label: Image,
+                    name: image,
+                    widget: object,
+                    fields:
+                      [
                         {
-                          label: Image,
-                          name: image,
-                          widget: object,
-                          fields:
-                            [
-                              {
-                                label: Image file,
-                                name: imageFile,
-                                widget: image,
-                              },
-                              {
-                                label: Image description,
-                                name: imageDesc,
-                                widget: string,
-                              },
-                            ],
+                          label: Image file,
+                          name: imageFile,
+                          widget: image,
+                        },
+                        {
+                          label: Image description,
+                          name: imageDesc,
+                          widget: string,
                         },
                       ],
                   },
-                ],
+                ],    
             }
 
       - file: "src/pages/en/contact/index.md"

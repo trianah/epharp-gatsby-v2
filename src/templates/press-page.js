@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import PressItems from "../components/PressItems";
 import PageHeadig from "../components/PageHeading";
 
-export const PressPageTemplate = ({ title, main }) => {
+export const PressPageTemplate = ({ title, pressItems }) => {
   return (
     <Layout>
       <main>
@@ -12,7 +12,7 @@ export const PressPageTemplate = ({ title, main }) => {
 
         <div className="site-gutters site-gutters--offset-header site-gutters--push-footer">
           <div className="container-wide">
-            <PressItems pressItems={main.pressItems} />
+            <PressItems pressItems={pressItems} />
           </div>
         </div>
       </main>
@@ -22,16 +22,17 @@ export const PressPageTemplate = ({ title, main }) => {
 
 PressPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  main: PropTypes.shape({
-    pressItems: PropTypes.array
-  })
+  pressItems: PropTypes.array
 };
 
 const PressPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <PressPageTemplate title={frontmatter.title} main={frontmatter.main} />
+    <PressPageTemplate
+      title={frontmatter.title}
+      pressItems={frontmatter.pressItems}
+    />
   );
 };
 
@@ -50,23 +51,21 @@ export const pressPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        main {
-          pressItems {
-            image {
-              imageFile
-              imageDesc
-            }
-            title
-            date(formatString: "DD MMM YYYY")
-            source
-            description
-            link {
-              address
-              text
-            }
-            tags
-            language
+        pressItems {
+          image {
+            imageFile
+            imageDesc
           }
+          title
+          date(formatString: "DD MMM YYYY")
+          source
+          description
+          link {
+            address
+            text
+          }
+          tags
+          language
         }
       }
     }

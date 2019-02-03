@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import { PressPageTemplate } from "../../templates/press-page";
 
 const PressPagePreview = ({ entry }) => {
-  const entryPressItems = entry.getIn(["data", "main", "pressItems"]);
+  const entryPressItems = entry.getIn(["data", "pressItems"]);
   const pressItems = entryPressItems ? entryPressItems.toJS() : [];
 
   return (
     <PressPageTemplate
       title={entry.getIn(["data", "title"])}
-      main={{ pressItems }}
+      pressItems={{ pressItems }}
     />
   );
 };
