@@ -9,7 +9,7 @@ const EventsPagePreview = ({ entry }) => {
   return (
     <EventsPageTemplate
       title={entry.getIn(["data", "title"])}
-      main={entry.getIn(["data", "main"])}
+      events={entry.getIn(["data", "events"])}
     />
   );
 };
