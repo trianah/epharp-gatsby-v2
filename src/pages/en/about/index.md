@@ -1,7 +1,7 @@
 ---
 templateKey: about-page
 title: About Emmanuel
-image: /img/emmanuel-padilla-holguin.jpg
+image: /img/emmanuel-padilla-holguin-and-harp.jpg
 ---
 Mexican harpist **Emmanuel Padilla Holguín** recently became the first Latin American harpist to win an international harp competition by receiving 1st prize and Audience Award at the _Dutch Harp Competition 2016_ and 1st prize at the _IV Mexico International Harp Competition_.
 
