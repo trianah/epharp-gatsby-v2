@@ -46,6 +46,13 @@ collections:
         name: "events"
         fields:
           - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "events-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
               label: Events,
               name: events,
               widget: list,
