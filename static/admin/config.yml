@@ -12,12 +12,17 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
 
   - name: "pages"
     label: "Pages"
@@ -26,32 +31,112 @@ collections:
         label: "About"
         name: "about"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: Image, name: image, widget: image}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: Image, name: image, widget: image }
 
       - file: "src/pages/en/events/index.md"
         label: "Events"
         name: "events"
         fields:
-          - {label: Main, name: main, widget: object, fields: [{label: Events, name: events, widget: list, fields: [{label: Title, name: title, widget: string},{label: "Date and time", name: dateTime, widget: string },{label: Venue, name: venue, widget: string}, {label: Country, name: country, widget: string}, {label: Description, name: description, widget: text}]}]}
+          - {
+              label: Events,
+              name: events,
+              widget: list,
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  { label: "Date and time", name: dateTime, widget: string },
+                  { label: Venue, name: venue, widget: string },
+                  { label: Country, name: country, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
 
       - file: "src/pages/en/press/index.md"
         label: "Press"
         name: "press"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "press-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: Main, name: main, widget: object, fields: [{ label: "Press items", name: "pressItems", widget: "list", fields: [{label: Title, name: title, widget: string}, {label: Date, name: date, widget: date}, {label: Source, name: source, widget: string}, {label: Description, name: description, widget: text}, {label: Link, name: link, widget: object, fields: [{label: Link address, name: address, widget: string}, {label: Link text, name: text, widget: string}]}, {label: Tags, name: tags, widget: list}, {label: Language, name: language, widget: string}, {label: Image, name: image, widget: object, fields: [{label: Image file, name: imageFile, widget: image}, {label: Image description, name: imageDesc, widget: string}]}]}]}
-    
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "press-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: Main,
+              name: main,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Press items",
+                    name: "pressItems",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: Title, name: title, widget: string },
+                        { label: Date, name: date, widget: date },
+                        { label: Source, name: source, widget: string },
+                        { label: Description, name: description, widget: text },
+                        {
+                          label: Link,
+                          name: link,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Link address,
+                                name: address,
+                                widget: string,
+                              },
+                              { label: Link text, name: text, widget: string },
+                            ],
+                        },
+                        { label: Tags, name: tags, widget: list },
+                        { label: Language, name: language, widget: string },
+                        {
+                          label: Image,
+                          name: image,
+                          widget: object,
+                          fields:
+                            [
+                              {
+                                label: Image file,
+                                name: imageFile,
+                                widget: image,
+                              },
+                              {
+                                label: Image description,
+                                name: imageDesc,
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+
       - file: "src/pages/en/contact/index.md"
         label: "Contact"
         name: "contact"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
 
       # - file: "src/pages/en/scores/index.md"
       #   label: "Scores"
@@ -69,14 +154,110 @@ collections:
         label: "Products Page"
         name: "products"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
-      
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "product-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Description, name: description, widget: string }
+          - {
+              label: Intro,
+              name: intro,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Blurbs,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Text, name: text, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Main,
+              name: main,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                  {
+                    label: Image1,
+                    name: image1,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image2,
+                    name: image2,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                  {
+                    label: Image3,
+                    name: image3,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Alt, name: alt, widget: string },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Testimonials,
+              name: testimonials,
+              widget: list,
+              fields:
+                [
+                  { label: Quote, name: quote, widget: string },
+                  { label: Author, name: author, widget: string },
+                ],
+            }
+          - { label: Full_image, name: full_image, widget: image }
+          - {
+              label: Pricing,
+              name: pricing,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: string },
+                  {
+                    label: Plans,
+                    name: plans,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Plan, name: plan, widget: string },
+                        { label: Price, name: price, widget: string },
+                        {
+                          label: Description,
+                          name: description,
+                          widget: string,
+                        },
+                        { label: Items, name: items, widget: list },
+                      ],
+                  },
+                ],
+            }
