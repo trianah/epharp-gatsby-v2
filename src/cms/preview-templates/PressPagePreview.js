@@ -9,7 +9,7 @@ const PressPagePreview = ({ entry }) => {
   return (
     <PressPageTemplate
       title={entry.getIn(["data", "title"])}
-      pressItems={{ pressItems }}
+      pressItems={pressItems}
     />
   );
 };
