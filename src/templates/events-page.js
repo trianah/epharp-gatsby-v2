@@ -103,7 +103,7 @@ export const eventsPageQuery = graphql`
         main {
           events {
             title
-            dateTime(formatString: "DD MMM YYYY – hh:mm a")
+            dateTime
             venue
             country
             description

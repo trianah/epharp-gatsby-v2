@@ -1,4 +1,6 @@
 ---
+templateKey: events-page
+title: Events
 main:
   events:
     - country: "Madrid, Spain"
