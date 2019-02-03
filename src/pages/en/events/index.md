@@ -2,17 +2,17 @@
 main:
   events:
     - country: 'Madrid, Spain'
-      dateTime: 2018-06-12T22:00:00.000Z
+       dateTime: 'Jun 12 2018 – 10:00 pm'
       description: 'Works by Händel, Frerichs and Soler.'
       title: Harp recital
       venue: Queen Sofia Museum
     - country: Hong Kong
-      dateTime: 2018-07-20T23:00:00.000Z
+       dateTime: 'Jul 20 2018 – 11:00 pm'
       description: 'Works by Händel, Frerichs and Soler.'
       title: Harp recital
       venue: Hong Kong Academy for Performing Arts
     - country: 'Utrecht, Netherlands'
-      dateTime: 2018-07-27T23:00:00.000Z
+       dateTime: 'Jul 27 2018 – 11:00 pm'
       description: >-
         Finals of the Dutch Harp Competition 2016. Works by Händel, Frerichs and
         Soler.
@@ -32,4 +32,3 @@ main:
       title: Sample Event
       venue: A Venue
 ---
-
