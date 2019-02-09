@@ -83,7 +83,7 @@ collections:
               fields:
                 [
                   { label: Title, name: title, widget: string },
-                  { label: Date, name: date, widget: date },
+                  { label: Date, name: date, widget: string },
                   { label: Source, name: source, widget: string },
                   { label: Description, name: description, widget: text },
                   {
