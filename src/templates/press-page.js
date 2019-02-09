@@ -57,7 +57,7 @@ export const pressPageQuery = graphql`
             imageDesc
           }
           title
-          date(formatString: "DD MMM YYYY")
+          date
           source
           description
           link {

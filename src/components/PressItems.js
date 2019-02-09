@@ -30,13 +30,6 @@ const PressItems = ({ pressItems }) => (
             </a>
             <p className="c-press__tag--square">{item.language}</p>
           </div>
-          {/* <ul className="c-press__tags-wrap">
-            {item.tags.map(i => (
-              <li key={i} className="c-press__tag">
-                #{i}
-              </li>
-            ))}
-          </ul> */}
         </div>
       </li>
     ))}
@@ -51,7 +44,7 @@ PressItems.propTypes = {
         imageDesc: PropTypes.string
       }),
       title: PropTypes.string,
-      date: PropTypes.date,
+      date: PropTypes.string,
       source: PropTypes.string,
       description: PropTypes.string,
       link: PropTypes.shape({
