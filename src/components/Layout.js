@@ -5,7 +5,7 @@ import favicon16 from "../favicon/favicon-16x16.png";
 import favicon32 from "../favicon/favicon-32x32.png";
 import favicon96 from "../favicon/favicon-96x96.png";
 
-import Navbar from "../components/Navbar";
+import Header from "../components/Header/Header";
 import Footer from "../components/Footer";
 import "./all.sass";
 
@@ -29,7 +29,7 @@ const TemplateWrapper = ({ children }) => (
         { rel: "shortcut icon", type: "image/png", href: `${favicon96}` }
       ]}
     />
-    <Navbar />
+    <Header />
     <div className="l-content">{children}</div>
     <Footer />
     <div id="fb-root" />

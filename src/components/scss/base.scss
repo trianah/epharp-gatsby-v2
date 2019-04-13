@@ -2,16 +2,6 @@ html {
   background-color: $black;
 }
 
-html > * {
-  //border: 1px dashed yellowgreen;
-}
-
-html,
-body,
-body > div:first-child,
-body > div:first-child > div {
-  //height: 100%;
-}
 body > div:first-child > div {
   display: flex;
   flex-direction: column;
@@ -24,7 +14,6 @@ body > div:first-child > div {
 }
 
 body {
-  //color: $dark-text;
   color: $white;
   font-size: 19px;
   background-color: $black;
@@ -90,11 +79,9 @@ strong {
 .site-gutters {
   margin-left: gutter(1);
   margin-right: gutter(1);
-  //border: 1px dashed orangered;
 }
 
 .site-gutters--offset-header {
-  //margin-top: $header-height + gutter(3);
   margin-top: gutter(3);
 }
 .site-gutters--push-footer {
@@ -105,7 +92,6 @@ strong {
   max-width: 40em;
   margin-left: auto;
   margin-right: auto;
-  //border: 1px dashed peru;
 }
 
 .container-wide {
@@ -117,4 +103,10 @@ strong {
   }
 }
 
-// Efect: text up and then draw a line
+.wrapper {
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 1px dashed yellowgreen;
+}
