@@ -53,7 +53,7 @@ const Nav = styled("nav")(navStyle);
 
 export default ({ isOpen }) => (
   <Nav isOpen={isOpen}>
-    <header className="zzzc-header">
+    <div className="zzzc-header">
       <nav className="navbar is-transparent">
         <div className="zzzc-header__lower">
           <div className="zzzc-header__lower-end">
@@ -107,6 +107,6 @@ export default ({ isOpen }) => (
           </div>
         </div>
       </nav>
-    </header>
+    </div>
   </Nav>
 );

@@ -35,7 +35,7 @@ export default class Header extends Component {
     const { isOpen } = this.state;
 
     return (
-      <header className={`${headerStyle} c-header`}>
+      <header className={`${headerStyle} c-header`} style={isOpen ? {overflow: 'visible'} : {overflow: 'hidden', animation: '5s delay-overflow'}}>
         <div className="wrapper c-header-inner">
           <div>
             <a href="/" className={`${homeLogoStyle}`}>
