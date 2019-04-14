@@ -17,16 +17,16 @@ export const AboutPageTemplate = ({
       <main>
         <PageHeading title={title} />
         <div className="site-gutters site-gutters--offset-header site-gutters--push-footer">
-          <div className="bio-content">
+          <div className="bio-content wrapper">
+            <div className="bio-content__text">
+              <PageContent className="content" content={content} />
+            </div>
             <div className="bio-content__img">
               <img
                 src={image}
                 className="c-image-bio"
                 alt="Photograph of harpist Emmanuel Padilla Holguin"
               />
-            </div>
-            <div className="bio-content__text">
-              <PageContent className="content" content={content} />
             </div>
           </div>
         </div>

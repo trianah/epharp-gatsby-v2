@@ -1,18 +1,9 @@
 .c-album {
-  //border: 1px dashed pink;
-  max-width: 55em;
+  max-width: 45em;
   margin: auto;
-  @media only screen and (min-width: $break-med){
+  @media only screen and (min-width: $break-med) {
     display: flex;
   }
-  
-}
-.c-album__img-wrap {
-  //border: 1px dashed red;
-}
-
-.c-album__info-wrap {
- //border: 1px dashed red;
 }
 
 .c-album + .c-album {
@@ -26,13 +17,12 @@
   margin-right: auto;
   border-radius: $default-border-radius;
   margin-bottom: 2rem;
-  @media only screen and (min-width: $break-med){
+  @media only screen and (min-width: $break-med) {
     margin-right: 2rem;
   }
 }
 
 .c-album__title {
-  //max-width: 15em;
   margin: auto;
   text-transform: uppercase;
   letter-spacing: $default-letter-spacing;
@@ -40,8 +30,7 @@
   line-height: 1.2;
   margin-bottom: gutter(1);
   font-weight: bold;
-  //text-align: center;
-  @media only screen and (min-width: $break-med){
+  @media only screen and (min-width: $break-med) {
     font-size: 1.75rem;
   }
 }
@@ -61,18 +50,14 @@
 }
 
 .c-album__streaming {
-  //border: 1px dashed palevioletred;
   display: flex;
   flex-wrap: wrap;
   margin-left: -0.75rem;
 }
 
 .c-album__streaming-item {
-  //border: 1px dashed olive;
   margin: 0.75rem;
-  //display: inline-block;
-  a{
-    //border: 1px dashed peru;
+  a {
     display: block;
   }
 }

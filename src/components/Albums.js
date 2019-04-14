@@ -5,7 +5,6 @@ import { ICONS } from "../components/constants";
 
 const Albums = ({ albums }) => (
   <div>
-    {/* {albums.map(album => ( */}
     <div className="c-album">
       <div className="c-album__img-wrap">
         <img
@@ -117,7 +116,6 @@ const Albums = ({ albums }) => (
         </p>
       </div>
     </div>
-    {/* ))} */}
   </div>
 );
 

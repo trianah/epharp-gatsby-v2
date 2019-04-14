@@ -10,7 +10,9 @@ export const AlbumsPageTemplate = ({ title, albums }) => {
       <main>
         <PageHeading title={title} />
         <div className="site-gutters site-gutters--offset-header site-gutters--push-footer">
-          <Albums albums={albums} />
+          <div className="wrapper">
+            <Albums albums={albums} />
+          </div>
         </div>
       </main>
     </Layout>
