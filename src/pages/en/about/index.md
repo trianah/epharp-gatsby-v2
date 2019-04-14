@@ -3,28 +3,12 @@ templateKey: about-page
 title: About Emmanuel
 image: /img/emmanuel-padilla-holguin-and-harp.jpg
 ---
-Mexican harpist **Emmanuel Padilla Holguín** recently became the first Latin American harpist to win an international harp competition by receiving 1st prize and Audience Award at the _Dutch Harp Competition 2016_ and 1st prize at the _IV Mexico International Harp Competition_.
+Emmanuel Padilla Holguín is a Mexican harpist who recently has identified mainly with Latin American music; in the academic, traditional and folk streams. After becoming the first Latin American harpist to win an international harp competition by receiving 1 st prize and Audience Award at the Dutch Harp Competition 2016 and 1 st prize at the IV Mexico International Harp Competition, Emmanuel was supported to travel to Cuba and Argentina to learn from local experts the craft of their music, improvisation, and artistic lifestyle.
 
- 
+However, Emmanuel’s first steps into his journey of repertoire discovery and conservation in the Latin American music world happened previously, by realizing two [recording projects](/en/albums) comprised of original harp music by Mexican composers, most of it recorded for the first time.
 
-Padilla Holguín also won the _2016 Ginastera Harp Concerto Competition_ at Indiana University and, as winner of the _2015 Latin American Music Recording Competition_ organized by the Jacobs School of Music, he recorded his first CD _Three centuries of Mexican harp music_, released both in the US and Mexico.
+Given his strong academic background, Emmanuel’s arrangements for harp are innovative and cover Latin American folk music to Spanish baroque classics and orchestral 20th century works.
 
+Experimenting with his own voice while playing the harp is a current project, focusing on singing love songs, often with subtle sociopolitical content, looking to communicate strong messages and affects through story-telling in a concert format.
 
-
-In 2017 he released in a double CD comprising the entire harp catalogue by Mexican composer Mario Ruiz Armengol.
-
-
-
-Padilla Holguín has performed with renowned ensembles like Holland Baroque, Bolívar Soloists, Youth Orchestra of the Americas, Mexico City Philharmonic, National Symphony of Mexico, Xalapa Symphony, North Iceland Symphony, Norwegian Radio Orchestra, etc. And worked with collaborated with more than 50 conductors such as Riccardo Muti, Miguel Harth-Bedoya, Kenneth Jean, Carlos Miguel Prieto, Rossen Milanov and Sylvain Gasançon.
-
-
-
-He has performed extensively in more than 50 cities in Mexico, USA, Spain, Holland, Croatia, Norway, Sweden, Iceland, Denmark, Argentina, Brazil, Dominican Republic, Jamaica, Cuba and China.
-
-
-
-Emmanuel has served as assistant faculty at the _National Youth Orchestra of Mexico_ as well as given masterclasses at the _National Autonomous University of Mexico (UNAM)_ and _University of Veracruz (UV)_ and at the _Federal University of Minas Gerais (UFMG)_ in Belo Horizonte, Brazil. He has also participated in music outreach programs throughout Latin America.
-
-
-
-Having started his music studies the age of 3 in Mexico City, Emmanuel now holds a Bachelor of Music from the Jacobs School of Music, Indiana University and is currently furthering his education at the Norwegian Academy of Music in Oslo, Norway, where he is pursuing a very prestigious Master’s-Artist Diploma degree.
+Holding a Bachelor’s degree from Indiana University and a Master’s/Artist Diploma degree from the Norwegian Academy of Music, Emmanuel’s versatility in Classical, Traditional and Folk music through conventional and improvisational techniques supports his path as an artist; based on the conviction that music performance has to be congruent and meet the standards of the challenges of today’s world. He has done so everywhere from the best concert halls to the streets in more than 60 cities in 15 different countries so far.
