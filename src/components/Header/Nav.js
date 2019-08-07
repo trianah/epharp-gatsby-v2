@@ -67,7 +67,7 @@ export default ({ isOpen }) => (
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="menu-link hover-1"
                   activeClassName="active"
@@ -75,7 +75,7 @@ export default ({ isOpen }) => (
                 >
                   Events
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   className="menu-link hover-1"
@@ -85,7 +85,7 @@ export default ({ isOpen }) => (
                   Albums
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   className="menu-link hover-1"
                   activeClassName="active"
@@ -93,7 +93,7 @@ export default ({ isOpen }) => (
                 >
                   Press
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   className="menu-link hover-1"
