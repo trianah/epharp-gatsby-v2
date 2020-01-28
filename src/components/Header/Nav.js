@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled, { css } from "react-emotion";
+import React from 'react'
+import { Link } from 'gatsby'
+import styled, { css } from 'react-emotion'
 
 const navStyle = ({ isOpen }) => css`
-  transform: ${isOpen ? "translate3d(0, 0, 0);" : "translate3d(100%, 0, 0);"};
+  transform: ${isOpen ? 'translate3d(0, 0, 0);' : 'translate3d(100%, 0, 0);'};
   transition: opacity 300ms ease, transform 300ms ease;
   position absolute;
   width: 100%;
@@ -47,9 +47,9 @@ const navStyle = ({ isOpen }) => css`
     background-color: transparent;
     color: white;
   }
-`;
+`
 
-const Nav = styled("nav")(navStyle);
+const Nav = styled('nav')(navStyle)
 
 export default ({ isOpen }) => (
   <Nav isOpen={isOpen}>
@@ -67,7 +67,7 @@ export default ({ isOpen }) => (
                   About
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   className="menu-link hover-1"
                   activeClassName="active"
@@ -75,7 +75,7 @@ export default ({ isOpen }) => (
                 >
                   Events
                 </Link>
-              </li> */}
+              </li>
               <li>
                 <Link
                   className="menu-link hover-1"
@@ -109,4 +109,4 @@ export default ({ isOpen }) => (
       </nav>
     </div>
   </Nav>
-);
+)
