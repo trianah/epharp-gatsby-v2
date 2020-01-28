@@ -3,7 +3,7 @@ templateKey: about-page
 title: About Emmanuel
 image: /img/emmanuel-padilla-holguin-and-harp.jpg
 ---
-Emmanuel Padilla Holguín is a mexican harpist who recently has identified mainly with Latin American music; in the academic, traditional and folk streams. After becoming the first Latin American harpist to win an international harp competition by receiving 1 st prize and Audience Award at the Dutch Harp Competition 2016 and 1 st prize at the IV Mexico International Harp Competition, Emmanuel was supported to travel to Cuba and Argentina to learn from local experts the craft of their music, improvisation, and artistic lifestyle.
+Emmanuel Padilla Holguín is a Mexican harpist who recently has identified mainly with Latin American music; in the academic, traditional and folk streams. After becoming the first Latin American harpist to win an international harp competition by receiving 1 st prize and Audience Award at the Dutch Harp Competition 2016 and 1 st prize at the IV Mexico International Harp Competition, Emmanuel was supported to travel to Cuba and Argentina to learn from local experts the craft of their music, improvisation, and artistic lifestyle.
 
 However, Emmanuel’s first steps into his journey of repertoire discovery and conservation in the Latin American music world happened previously, by realizing two [recording projects](/en/albums) comprised of original harp music by Mexican composers, most of it recorded for the first time.
 
