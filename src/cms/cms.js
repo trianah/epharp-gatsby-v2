@@ -15,7 +15,7 @@ import ContactPagePreview from "./preview-templates/ContactPagePreview";
 CMS.registerPreviewStyle("/styles.css");
 
 CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("products", ProductPagePreview);
+// CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("events", EventsPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
 //CMS.registerPreviewTemplate('scores', ScoresPagePreview)
