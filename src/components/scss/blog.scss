@@ -1,0 +1,27 @@
+
+.blog-item {
+    
+    margin-bottom: 4rem;
+
+    @media only screen and (min-width: $break-med) {
+        padding: 0 2rem;
+    }
+}
+
+.blog__meta {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.blog__title {
+    color:white;
+    transition: opacity 250ms;
+
+    &:hover{
+        color: white;
+        opacity: 0.5;
+    }
+}

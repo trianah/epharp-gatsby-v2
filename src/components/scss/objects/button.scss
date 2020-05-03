@@ -1,0 +1,14 @@
+.o-btn {
+    background-color: $accent;
+    padding: 10px;
+    font-weight: 300;
+    display: inline-block;
+    line-height: 1;
+    color: white;
+    transition: opacity 250ms;
+
+    &:hover {
+        color: white;
+        opacity: 0.5;
+    }
+}

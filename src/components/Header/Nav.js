@@ -71,6 +71,15 @@ export default ({ isOpen }) => (
                 <Link
                   className="menu-link hover-1"
                   activeClassName="active"
+                  to="/en/blog/"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="menu-link hover-1"
+                  activeClassName="active"
                   to="/en/events/"
                 >
                   Events
