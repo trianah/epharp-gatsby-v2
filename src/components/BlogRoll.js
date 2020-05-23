@@ -19,7 +19,7 @@ class BlogRoll extends React.Component {
                 }`}
               >
                 <div className="post-img-wrap">
-                  <img src="/img/emmanuel-padilla-holguin-harp-column.png" alt="" />
+                  <img src={post.frontmatter.previewImage} alt="" />
                 </div>
                 <div>
                   <header>
@@ -84,6 +84,7 @@ export default () => (
               frontmatter {
                 title
                 templateKey
+                previewImage
                 date(formatString: "DD MMM YYYY")
               }
             }
