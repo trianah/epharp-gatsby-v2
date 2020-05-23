@@ -3,6 +3,7 @@ templateKey: blog-post
 title: Round Trip
 date: 2020-05-14T11:13:56.283Z
 description: ' '
+previewImage: /img/emmanuel-padilla-holguin-harp-column.png
 tags:
   - interview
 ---
