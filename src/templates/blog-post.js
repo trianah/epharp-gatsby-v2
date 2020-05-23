@@ -23,9 +23,9 @@ export const BlogPostTemplate = ({
         <PageHeading title={title} />
     <section className="section">
       {helmet || ''}
-      <div className="container content">
+      <div className="container content max-w-post mx-auto">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-10 is-offset-1 c-rich-text">
             
             <p>{description}</p>
             <PostContent content={content} />
