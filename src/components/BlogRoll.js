@@ -18,33 +18,38 @@ class BlogRoll extends React.Component {
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
               >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className="featured-thumbnail">
-                     
-                    </div>
-                  ) : null}
-                  <p className="post-meta c-event__title">
-                    <Link
-                      className="blog__title"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
+                <div className="post-img-wrap">
+                  <img src="/img/emmanuel-padilla-holguin-harp-column.png" alt="" />
+                </div>
+                <div>
+                  <header>
+                    {post.frontmatter.featuredimage ? (
+                      <div className="featured-thumbnail">
+                      
+                      </div>
+                    ) : null}
+                    <p className="post-meta c-event__title">
+                      <Link
+                        className="blog__title"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                      
+                      <span className="is-block blog__meta">
+                        {post.frontmatter.date}
+                      </span>
+                    </p>
+                  </header>
+                  <p className="blog__excerpt">
+                    {post.excerpt}
+                    <br />
+                    <br />
+                    <Link className="o-btn" to={post.fields.slug}>
+                      Read article
                     </Link>
-                    
-                    <span className="is-block blog__meta">
-                      {post.frontmatter.date}
-                    </span>
                   </p>
-                </header>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="o-btn" to={post.fields.slug}>
-                    Read article
-                  </Link>
-                </p>
+                </div>
               </article>
             </div>
           ))}
@@ -71,7 +76,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 250)
               id
               fields {
                 slug
